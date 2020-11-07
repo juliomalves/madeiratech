@@ -1,1 +1,3 @@
 # madeiratech
+
+Sapper + TailwindCSS + TypeScript

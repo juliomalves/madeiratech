@@ -1,0 +1,9 @@
+{
+    "svelteSortOrder" : "styles-scripts-markup",
+    "arrowParens": "avoid",
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "none",
+    "printWidth": 140,
+    "tabWidth": 4
+}

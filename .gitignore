@@ -1,0 +1,14 @@
+/node_modules/
+/src/node_modules/@sapper/
+yarn-error.log
+/__sapper__/
+.npmrc
+
+.DS_Store
+
+# editors
+.idea*
+*.iml
+*.swp
+.sublimelinterrc*
+.vscode*
