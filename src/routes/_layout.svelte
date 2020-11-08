@@ -4,6 +4,9 @@
         html {
             @apply antialiased;
         }
+        body {
+            @apply bg-gray-100;
+        }
         h1 {
             @apply mt-8 mb-4 text-3xl font-bold leading-tight;
         }
@@ -14,7 +17,7 @@
             @apply my-2 text-xl font-bold leading-tight;
         }
         p {
-            @apply mb-4 text-lg text-gray-800;
+            @apply text-lg leading-snug;
         }
         a {
             @apply transition-all duration-200;
@@ -32,6 +35,6 @@
 
 <Nav {segment} />
 
-<main class="max-w-5xl bg-white p-4 my-0 mx-auto">
+<main class="max-w-5xl p-4 my-0 mx-auto">
     <slot />
 </main>
