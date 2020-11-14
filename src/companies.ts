@@ -1,7 +1,8 @@
 export type Address = {
-    street: string
-    postcode: string
+    street?: string
+    postcode?: string
     city: string
+    gmaps?: string
 }
 
 export type Contact = {
@@ -17,6 +18,7 @@ export type Website = {
 export type Social = {
     facebook?: string
     instagram?: string
+    github?: string
     linkedin?: string
     twitter?: string
     youtube?: string
@@ -26,8 +28,9 @@ export type Company = {
     name: string
     category?: string
     description: string
+    logo: string
     website: Website
-    address?: Address
+    address: Address
     contact?: Contact
     social?: Social
 }
