@@ -1,11 +1,21 @@
 <script lang="ts">
     import type { Company } from '../companies'
-    import { emailIcon, facebookIcon, githubIcon, instagramIcon, linkedinIcon, locationIcon, phoneIcon, twitterIcon, youtubeIcon } from '../icons'
+    import {
+        emailIcon,
+        facebookIcon,
+        githubIcon,
+        instagramIcon,
+        linkedinIcon,
+        locationIcon,
+        phoneIcon,
+        twitterIcon,
+        youtubeIcon
+    } from '../icons'
     import SvgIcon from './svg-icon.svelte'
 
     export let company: Company
 
-    const { name, description, logo, address, contact, website, social } = company
+    const { name, description, logo = './logo-192.png', address, contact, website, social } = company
     const { home } = website
     const { gmaps = home, city } = address ?? {}
     const { email, phone } = contact ?? {}
@@ -14,11 +24,11 @@
 
 <article class="grid gap-y-4 md:gap-y-0 md:gap-x-4 md:grid-cols-card bg-white p-4">
     <div class="flex items-center">
-        <img class="w-12" alt={name} src={logo || './logo-192.png'} width="48px" />
-        <div class="flex flex-col pl-2">
+        <a class="pr-2" href={home} rel="external"><img class="w-12" alt={name} src={logo} width="48px" /></a>
+        <div class="flex flex-col">
             <a class="text-xl" href={home} rel="external">{name}</a>
             <a class="flex items-center text-base text-gray-600" href={gmaps} rel="external">
-                <SvgIcon d={locationIcon} color="#718096" size="1rem" className="flex-none"/>
+                <SvgIcon d={locationIcon} color="#718096" size="1rem" className="flex-none" />
                 {city}
             </a>
         </div>
